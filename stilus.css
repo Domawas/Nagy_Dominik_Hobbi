@@ -1,0 +1,160 @@
+body {
+    background-color: #000000;
+    font-family: 'Arial', sans-serif;
+    font-size: 10pt;
+    color: #fcfcfc; 
+    margin: 0;
+    padding: 0;
+    text-align: justify; 
+}
+
+#tarolo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh;
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+}
+
+#fejlec {
+    font-size: 10pt;
+    letter-spacing: 5pt;
+    text-align: center;
+    font-family: "Sofia", sans-serif;
+    letter-spacing: 10pt;
+    text-transform: uppercase;   
+}
+
+#lablec{
+    background-image: url("kepek másolata/lablec.png");
+    background-color: rgb(0, 0, 0);
+    color: rgb(5, 255, 17);
+    font-size: 25px;
+    padding: 20px 10px;
+    text-align: center;
+    font-size: 30px;
+}
+
+#tartalom{
+    display: grid;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 10px;
+}
+
+li {
+    list-style-type: none;
+    padding: 30px;
+}
+
+.edzesterv {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    padding: 10px;
+}
+
+.edzes {
+    background-color: rgb(0, 0, 0);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgb(5, 255, 17);
+    max-height: 350px; 
+    overflow-y: auto; /* Görgetősáv megjelenítése, ha a tartalom túllépi a magasságot */
+}
+
+.edzes-kep {
+    width: 100%; 
+    max-height: 200px; 
+    border-radius: 8px; 
+    margin-bottom: 5px; 
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+}
+
+.menu ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    gap: 10px;
+}
+
+.menu li {
+    text-align: center;
+    background-color: rgb(59, 57, 57);
+    padding: 20px 10px;
+    border-radius: 50px;
+    border: 5px solid rgba(0, 255, 13);
+    list-style-type: none;
+}
+
+a {
+    color: rgb(0, 255, 13);
+    background-color: rgb(59, 57, 57);
+    padding: 20px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+}
+
+a:hover{
+    color: black;
+}
+
+.menu a:hover {
+    color: rgb(5, 5, 5);
+}
+
+
+@media (max-width: 768px) {
+    #fejlec {
+        font-size: 8pt;
+    }
+
+    #lablec {
+        font-size: 20px; 
+        text-align: end;
+    }
+
+    #tarolo {
+        padding: 15px; 
+    }
+
+    .edzesterv {
+        grid-template-columns: 1fr; 
+    }
+
+    .menu ul {
+        grid-template-columns: 1fr 1fr; 
+    }
+}
+
+@media (max-width: 480px) {
+    #fejlec {
+        font-size: 7pt; 
+    }
+
+    #lablec {
+        font-size: 18px;
+    }
+
+    .menu ul {
+        grid-template-columns: 1fr; 
+    }
+
+    .edzesterv {
+        grid-template-columns: 1fr; 
+    }
+
+    #tarolo {
+        padding: 10px;
+    }
+}
